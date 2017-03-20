@@ -7,6 +7,10 @@ http://docs.botframework.com/builder/node/guides/understanding-natural-language/
 "use strict";
 var builder = require("botbuilder");
 var botbuilder_azure = require("botbuilder-azure");
+var vision = require('@google-cloud/vision')({
+    projectId: 'april-web',
+    keyFilename: './april-web.json'
+});
 
 var useEmulator = (process.env.NODE_ENV == 'development');
 
